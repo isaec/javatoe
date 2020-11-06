@@ -10,7 +10,7 @@ practicing encapsulation, so overkill encapsulation
 
 - [x] board object
 - [x] print board
-- [ ] game logic
+- [x] game logic
 - [ ] player object
 - [ ] game loop
 - [ ] ai object

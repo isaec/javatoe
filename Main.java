@@ -3,8 +3,8 @@ public class Main{
         Board board = new Board();
 
         while(!board.isOver()){
-            System.out.println(board);
-            break;
+            board.setSpace((int) (Math.random()*3), (int) (Math.random()*3), 1);
+            System.out.println(board+"\n");
         }
 
     }
