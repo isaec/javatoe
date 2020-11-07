@@ -8,7 +8,11 @@ public class Board {
         return getWinner(spaces) != 0;}
 
     public int[][] getSpaces(){return spaces;}
-    
+
+    public int getSpace(int index){
+        index = Math.max(0,Math.min(8,index));
+        return spaces[index/3][index-((index/3)*3)];
+    }
 
     public int getWinner(int[][] spaces){ //0 for none, 1 for x, 2 for o
         for(int[] row: spaces){ //now with intense taste of fish
@@ -96,7 +100,7 @@ public class Board {
     public String toString(){
         String[] allChars = getAllChars();
         return String.format(
-        " %s | %s | %s %n-----------%n %s | %s | %s %n-----------%n %s | %s | %s ",
+        " %s | %s | %s %n-----------%n %s | %s | %s %n-----------%n %s | %s | %s %n",
         allChars[0],allChars[1],allChars[2],
         allChars[3],allChars[4],allChars[5],
         allChars[6],allChars[7],allChars[8]);
