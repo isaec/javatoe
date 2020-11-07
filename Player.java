@@ -8,7 +8,7 @@ public class Player {
 
         int move = imp.nextInt()-1;
 
-        if(move <= 9 && move >= 1 && board.getSpace(move) == 0){
+        if(move <= 8 && move >= 0 && board.getSpace(move) == 0){
             board.setSpace((move/3),(move-((move/3)*3)),type);
             return;
         }

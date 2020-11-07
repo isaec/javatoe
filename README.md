@@ -11,7 +11,9 @@ practicing encapsulation, so overkill encapsulation
 - [x] board object
 - [x] print board
 - [x] game logic
-- [ ] player object
-- [ ] game loop
-- [ ] ai object
+- [x] player object
+- [x] game loop
+- [x] ai object
+- [ ] minmax instead of random ai
 - [ ] ensure its unbeatable
+- [ ] choose who goes first
