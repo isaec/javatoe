@@ -6,8 +6,9 @@ public class Main{
 
         while(!board.isOver()){
             System.out.println(board);
-            player.makeMove(board,1);
-            ai.makeMove(board,2);
+            ai.makeMove(board,1);
+            System.out.println(board);
+            player.makeMove(board,2);
         }
         System.out.println("Game over!");
         System.out.println(board);

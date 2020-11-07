@@ -1,7 +1,7 @@
 public class Board {
-    private int[][] spaces = {{0,0,2},
-                              {0,2,0},
-                              {2,0,0}}; //0 is blank, 1 is x, 2 is o
+    private int[][] spaces = {{0,0,0},
+                              {0,0,0},
+                              {0,0,0}}; //0 is blank, 1 is x, 2 is o
 
 
     public boolean isOver(){
