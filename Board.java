@@ -1,7 +1,7 @@
 public class Board {
-    private int[][] spaces = {{0,0,0},
-                              {0,0,0},
-                              {0,0,0}}; //0 is blank, 1 is x, 2 is o
+    private int[][] spaces = {{0,0,2},
+                              {0,2,0},
+                              {2,0,0}}; //0 is blank, 1 is x, 2 is o
 
 
     public boolean isOver(){
@@ -48,9 +48,11 @@ public class Board {
         if(numberO==3){return 2;}
         numberX = 0;
         numberO = 0;
-        for(int i = 2; i > 0; i--){
-            if(spaces[i][i]==1){numberX++;}
-            else if(spaces[i][i]==2){numberO++;}
+        int ii = 2;
+        for(int i = 0; i < 3; i++){
+            if(spaces[i][ii]==1){numberX++;}
+            else if(spaces[i][ii]==2){numberO++;}
+            ii--;
         }
         if(numberX==3){return 1;}
         if(numberO==3){return 2;}
