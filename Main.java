@@ -7,6 +7,7 @@ public class Main{
         while(!board.isOver()){
             System.out.println(board);
             ai.makeMove(board,1);
+            if(board.isOver()){break;}
             System.out.println(board);
             player.makeMove(board,2);
         }

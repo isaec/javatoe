@@ -14,7 +14,7 @@ public class Board {
         return spaces[index/3][index-((index/3)*3)];
     }
 
-    public int getWinner(int[][] spaces){ //0 for none, 1 for x, 2 for o
+    public static int getWinner(int[][] spaces){ //0 for none, 1 for x, 2 for o
         for(int[] row: spaces){ //now with intense taste of fish
             //horisontal checker
             int numberX = 0;
@@ -62,22 +62,24 @@ public class Board {
 
 
     public boolean setSpace(int x, int y, int value){
+        System.out.println(this);
         if(
         0<=x && x<=2 && 
         0<=y && y<=2 &&
         (value==1 || value==2)){
-            if(spaces[x][y] == 0){
-                spaces[x][y] = value;
+            if(this.spaces[x][y] == 0){
+                this.spaces[x][y] = value;
                 return true;
             }
-            else{return false;}
+            else{System.out.println("non zero ->"+x+"-"+y+" is "+spaces[x][y]);System.out.println(this);}
+            //else{return false;}
         }
         System.out.println(x+","+y+" to value "+value+" no es bueno");
         return false;
     }
 
     //to draw board
-    private String getSpaceChar(int spaceInt){
+    public static String getSpaceChar(int spaceInt){
         if(spaceInt==0){return " ";}
         else if(spaceInt==1){return "X";}
         else if(spaceInt==2){return "O";}
