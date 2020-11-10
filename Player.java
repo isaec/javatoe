@@ -17,4 +17,8 @@ public class Player {
         this.makeMove(board, type);//this has to be the wrong way to handle this
         
     }
+    @Override
+    public String toString(){
+        return "Player"; //this is for winner printing
+    }
 }

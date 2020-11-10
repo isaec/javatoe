@@ -42,5 +42,11 @@ public class Ai {
         while(true){ //make a random play
             if(board.setSpace((int)(Math.random()*3), (int)(Math.random()*3), type)){return;}
         }
+ 
+    }
+    
+    @Override
+    public String toString(){
+        return "Ai"; //this is for winner printing
     }
 }
