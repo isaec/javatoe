@@ -5,6 +5,8 @@ this is not my best work by any mesure, its a learning project for robo
 
 practicing encapsulation, so overkill encapsulation
 
+for the record this is ai in the buzzword sense
+
 ### kindly ignore
 
 
@@ -14,6 +16,7 @@ practicing encapsulation, so overkill encapsulation
 - [x] player object
 - [x] game loop
 - [x] ai object
-- [ ] minmax instead of random ai
-- [ ] ensure its unbeatable
+- [ ] ~~minmax instead of random ai~~
+- [x] basic state machine ai
+- [ ] ~~ensure its unbeatable~~
 - [ ] choose who goes first
