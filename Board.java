@@ -14,7 +14,11 @@ public class Board {
         return spaces[index/3][index-((index/3)*3)];
     }
 
-    public static int getWinner(int[][] spaces){ //0 for none, 1 for x, 2 for o
+    public int altGetSpace(int x, int y){
+        return spaces[x][y];
+    }
+
+    public static int getWinner(int[][] spaces){ //0 for none, 1 for x, 2 for o, 3 for no winner
         for(int[] row: spaces){ //now with intense taste of fish
             //horisontal checker
             int numberX = 0;
@@ -57,12 +61,21 @@ public class Board {
         if(numberX==3){return 1;}
         if(numberO==3){return 2;}
 
+
+        //finally, test if every move has been made
+        boolean noMove = true;
+        for(int[] row : spaces){
+            for(int point : row){
+                if(point==0){noMove=false;}
+            }
+        }
+        if(noMove){return 3;}
+
         return 0;
     }
 
 
     public boolean setSpace(int x, int y, int value){
-        System.out.println(this);
         if(
         0<=x && x<=2 && 
         0<=y && y<=2 &&
@@ -71,10 +84,8 @@ public class Board {
                 this.spaces[x][y] = value;
                 return true;
             }
-            else{System.out.println("non zero ->"+x+"-"+y+" is "+spaces[x][y]);System.out.println(this);}
-            //else{return false;}
+            else{return false;}
         }
-        System.out.println(x+","+y+" to value "+value+" no es bueno");
         return false;
     }
 
