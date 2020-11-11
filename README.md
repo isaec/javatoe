@@ -9,6 +9,64 @@ practicing encapsulation, so overkill encapsulation
 
 for the record this is ai in the buzzword sense
 
+## example game:
+
+```
+Would you like to be X(first) or O(second) or zero player? (1 or 2 or 0): 2
+   |   |   
+-----------
+   |   |   
+-----------
+   |   |   
+
+ X |   |   
+-----------
+   |   |   
+-----------
+   |   |   
+
+Enter your move(1-9): 3
+ X |   | O 
+-----------
+   |   |   
+-----------
+   |   |   
+
+ X |   | O 
+-----------
+   |   |   
+-----------
+   |   | X 
+
+Enter your move(1-9): 5
+ X |   | O 
+-----------
+   | O |   
+-----------
+   |   | X 
+
+ X |   | O 
+-----------
+   | O |   
+-----------
+ X |   | X 
+
+Enter your move(1-9): 4
+ X |   | O 
+-----------
+ O | O |   
+-----------
+ X |   | X 
+
+Game over! Ai won!
+ X |   | O 
+-----------
+ O | O |   
+-----------
+ X | X | X 
+```
+
+
 ### kindly ignore
 
 
