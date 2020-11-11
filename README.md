@@ -3,6 +3,8 @@ tictactoe in java, with an ai
 
 this is not my best work by any mesure, its a learning project for robo
 
+quite frankly, this code is *bad*
+
 practicing encapsulation, so overkill encapsulation
 
 for the record this is ai in the buzzword sense
@@ -19,4 +21,4 @@ for the record this is ai in the buzzword sense
 - [ ] ~~minmax instead of random ai~~
 - [x] basic state machine ai
 - [ ] ~~ensure its unbeatable~~
-- [ ] choose who goes first
+- [x] choose who goes first
